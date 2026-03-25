@@ -9,561 +9,385 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.7;
-      color: #1a1a2e;
+      color: #344054;
       background: #f8f9fb;
     }
 
-    /* ── Header ── */
+    /* Header */
     header {
       background: linear-gradient(135deg, #7F56D9 0%, #3538CD 100%);
       color: #fff;
-      padding: 48px 24px 40px;
+      padding: 44px 24px 36px;
       text-align: center;
     }
-    header .logo {
+    .logo {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      text-decoration: none;
+      gap: 10px;
+      margin-bottom: 16px;
     }
-    header .logo svg { border-radius: 8px; }
-    header .app-name {
-      font-size: 20px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.3px;
-    }
-    header h1 {
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 15px;
-      opacity: 0.85;
-      max-width: 520px;
-      margin: 0 auto;
-    }
-    .effective-badge {
+    .logo svg { border-radius: 8px; }
+    .app-name { font-size: 18px; font-weight: 700; color: #fff; }
+    header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 8px; }
+    header p { font-size: 14px; opacity: 0.8; max-width: 480px; margin: 0 auto; }
+    .badge {
       display: inline-block;
-      margin-top: 16px;
+      margin-top: 14px;
       background: rgba(255,255,255,0.15);
       border: 1px solid rgba(255,255,255,0.25);
       border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 13px;
+      padding: 3px 12px;
+      font-size: 12px;
       font-weight: 500;
     }
 
-    /* ── Layout ── */
-    .page-wrap {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
+    /* Layout */
+    .wrap { max-width: 740px; margin: 0 auto; padding: 0 20px 72px; }
 
-    /* ── TOC ── */
+    /* TOC */
     .toc {
       background: #fff;
       border: 1px solid #e4e7ec;
-      border-radius: 14px;
-      padding: 28px 32px;
-      margin: 36px 0 40px;
-      box-shadow: 0 1px 4px rgba(16,24,40,0.05);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 32px 0 28px;
+      box-shadow: 0 1px 3px rgba(16,24,40,0.05);
     }
     .toc h2 {
-      font-size: 13px;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.7px;
+      letter-spacing: 0.8px;
       color: #7F56D9;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
     .toc ol {
-      padding-left: 20px;
+      padding-left: 18px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6px 24px;
+      gap: 5px 20px;
     }
-    .toc ol li a {
-      color: #344054;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-    }
-    .toc ol li a:hover { color: #7F56D9; text-decoration: underline; }
+    .toc a { color: #344054; text-decoration: none; font-size: 13px; font-weight: 500; }
+    .toc a:hover { color: #7F56D9; }
+    @media (max-width: 500px) { .toc ol { grid-template-columns: 1fr; } }
 
-    @media (max-width: 560px) {
-      .toc ol { grid-template-columns: 1fr; }
-    }
-
-    /* ── Sections ── */
+    /* Sections */
     section {
       background: #fff;
       border: 1px solid #e4e7ec;
-      border-radius: 14px;
-      padding: 32px 36px;
-      margin-bottom: 20px;
-      box-shadow: 0 1px 4px rgba(16,24,40,0.05);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(16,24,40,0.05);
     }
-
     section h2 {
-      font-size: 19px;
+      font-size: 17px;
       font-weight: 700;
       color: #101828;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
       border-bottom: 1px solid #f2f4f7;
       display: flex;
       align-items: center;
-      gap: 10px;
-      letter-spacing: -0.2px;
+      gap: 9px;
     }
-    section h2 .num {
+    .num {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       background: #F4F3FF;
       color: #7F56D9;
-      border-radius: 8px;
-      font-size: 13px;
+      border-radius: 6px;
+      font-size: 12px;
       font-weight: 700;
       flex-shrink: 0;
     }
-
-    section p { color: #344054; margin-bottom: 14px; font-size: 15px; }
+    section p { margin-bottom: 12px; }
     section p:last-child { margin-bottom: 0; }
+    section ul { padding-left: 20px; margin-bottom: 12px; }
+    section ul li { margin-bottom: 6px; }
+    section ul li:last-child { margin-bottom: 0; }
+    a { color: #6941C6; }
 
-    section ul, section ol {
-      padding-left: 22px;
-      margin-bottom: 14px;
-      color: #344054;
-      font-size: 15px;
-    }
-    section ul li, section ol li { margin-bottom: 7px; }
-    section ul li:last-child, section ol li:last-child { margin-bottom: 0; }
-
-    /* ── Data Table ── */
-    .data-table {
+    /* Table */
+    .dt {
       width: 100%;
       border-collapse: collapse;
-      font-size: 14px;
-      margin: 18px 0;
-      border-radius: 10px;
+      font-size: 13px;
+      margin: 14px 0;
+      border-radius: 8px;
       overflow: hidden;
       border: 1px solid #e4e7ec;
     }
-    .data-table thead tr {
-      background: #F4F3FF;
-    }
-    .data-table thead th {
-      padding: 11px 14px;
+    .dt thead tr { background: #F4F3FF; }
+    .dt th {
+      padding: 10px 12px;
       text-align: left;
       font-weight: 700;
       color: #5925DC;
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       border-bottom: 1px solid #e4e7ec;
     }
-    .data-table tbody tr:nth-child(even) { background: #fafafa; }
-    .data-table tbody td {
-      padding: 11px 14px;
-      color: #344054;
+    .dt tbody tr:nth-child(even) { background: #fafafa; }
+    .dt td {
+      padding: 10px 12px;
       border-bottom: 1px solid #f2f4f7;
       vertical-align: top;
     }
-    .data-table tbody tr:last-child td { border-bottom: none; }
+    .dt tbody tr:last-child td { border-bottom: none; }
 
-    /* ── Highlight boxes ── */
-    .highlight {
-      border-radius: 10px;
-      padding: 14px 18px;
-      font-size: 14px;
-      margin: 16px 0;
+    /* Callout */
+    .callout {
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13px;
+      margin: 14px 0;
       display: flex;
-      gap: 12px;
+      gap: 10px;
       align-items: flex-start;
+      line-height: 1.6;
     }
-    .highlight.info {
-      background: #EFF8FF;
-      border: 1px solid #B2DDFF;
-      color: #1849A9;
-    }
-    .highlight.green {
-      background: #ECFDF3;
-      border: 1px solid #ABEFC6;
-      color: #067647;
-    }
-    .highlight .icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
-    .highlight .text { line-height: 1.6; }
+    .callout.blue  { background: #EFF8FF; border: 1px solid #B2DDFF; color: #1849A9; }
+    .callout.green { background: #ECFDF3; border: 1px solid #ABEFC6; color: #067647; }
+    .callout .ic { flex-shrink: 0; margin-top: 1px; }
 
-    /* ── Footer ── */
+    /* Footer */
     footer {
       text-align: center;
-      padding: 32px 24px;
+      padding: 28px 24px;
       color: #98a2b3;
-      font-size: 13px;
+      font-size: 12px;
       border-top: 1px solid #e4e7ec;
-      margin-top: 20px;
     }
     footer a { color: #7F56D9; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
 
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      header h1 { font-size: 24px; }
-      section { padding: 24px 20px; }
-      .toc { padding: 22px 20px; }
-      .data-table { font-size: 13px; }
-      .data-table thead th, .data-table tbody td { padding: 9px 10px; }
+    @media (max-width: 560px) {
+      section { padding: 20px 18px; }
+      .toc { padding: 20px 18px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ═══ HEADER ═══════════════════════════════════════════════════════════ -->
 <header>
   <div class="logo">
-    <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
       <rect width="32" height="32" rx="8" fill="rgba(255,255,255,0.2)"/>
       <circle cx="16" cy="16" r="11" stroke="white" stroke-width="1" stroke-dasharray="2.5 2" opacity="0.4"/>
       <circle cx="16" cy="16" r="7" stroke="white" stroke-width="1.2" opacity="0.6"/>
-      <path d="M5 16H9L11 12L14 21L17 11L19.5 16H22L24 14.5H27"
-        stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5 16H9L11 12L14 21L17 11L19.5 16H22L24 14.5H27" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
       <circle cx="16" cy="16" r="2.5" fill="white" opacity="0.9"/>
     </svg>
     <span class="app-name">StatusWatch for Jira</span>
   </div>
   <h1>Privacy Policy</h1>
-  <p>We are committed to protecting your privacy. This policy explains what data we collect, why, and how it is handled.</p>
-  <span class="effective-badge">Effective Date: March 15, 2026 &nbsp;·&nbsp; Version 1.0</span>
+  <p>What data we collect, why we collect it, and how it is handled.</p>
+  <span class="badge">Effective: March 15, 2026 &nbsp;·&nbsp; Version 1.0</span>
 </header>
 
-<!-- ═══ PAGE CONTENT ═════════════════════════════════════════════════════ -->
-<div class="page-wrap">
+<div class="wrap">
 
-  <!-- Table of Contents -->
   <div class="toc">
     <h2>Contents</h2>
     <ol>
       <li><a href="#s1">Who We Are</a></li>
-      <li><a href="#s2">Scope of This Policy</a></li>
-      <li><a href="#s3">Data We Collect</a></li>
-      <li><a href="#s4">Legal Basis for Processing</a></li>
-      <li><a href="#s5">How We Use Your Data</a></li>
-      <li><a href="#s6">Data Storage &amp; Security</a></li>
-      <li><a href="#s7">Data Retention</a></li>
-      <li><a href="#s8">Third-Party Services</a></li>
-      <li><a href="#s9">Your Rights</a></li>
-      <li><a href="#s10">Children's Privacy</a></li>
-      <li><a href="#s11">Changes to This Policy</a></li>
-      <li><a href="#s12">Contact Us</a></li>
+      <li><a href="#s2">Data We Collect</a></li>
+      <li><a href="#s3">Legal Basis for Processing</a></li>
+      <li><a href="#s4">How We Use Your Data</a></li>
+      <li><a href="#s5">Data Storage &amp; Security</a></li>
+      <li><a href="#s6">Data Retention</a></li>
+      <li><a href="#s7">Third-Party Services</a></li>
+      <li><a href="#s8">Your Rights</a></li>
+      <li><a href="#s9">Changes to This Policy</a></li>
+      <li><a href="#s10">Contact Us</a></li>
     </ol>
   </div>
 
-  <!-- 1 -->
   <section id="s1">
     <h2><span class="num">1</span> Who We Are</h2>
     <p>
-      <strong>Seven</strong> ("we", "us", or "our") develops and maintains
-      <strong>StatusWatch for Jira</strong>, an Atlassian Marketplace application built on the
-      Atlassian Forge platform.
+      <strong>Seven</strong> ("we", "us", "our") develops <strong>StatusWatch for Jira</strong>,
+      an Atlassian Marketplace app built on the Atlassian Forge platform. This policy covers
+      how we handle personal data when the app is installed on a Jira Cloud instance.
     </p>
     <p>
-      For privacy-related inquiries, you may contact us at:
-      <strong>muratseven50@gmail.com</strong>
+      It does not apply to Atlassian's own services — see the
+      <a href="https://www.atlassian.com/legal/privacy-policy" target="_blank" rel="noopener">Atlassian Privacy Policy</a> for those.
     </p>
   </section>
 
-  <!-- 2 -->
   <section id="s2">
-    <h2><span class="num">2</span> Scope of This Policy</h2>
-    <p>
-      This Privacy Policy applies to <strong>StatusWatch for Jira</strong> and describes
-      how we handle personal data collected through the application when installed on
-      a Jira Cloud instance via the Atlassian Marketplace.
-    </p>
-    <p>
-      This policy does not apply to Atlassian's own products and services. For Atlassian's
-      privacy practices, please refer to the
-      <a href="https://www.atlassian.com/legal/privacy-policy" target="_blank" rel="noopener">Atlassian Privacy Policy</a>.
-    </p>
-  </section>
+    <h2><span class="num">2</span> Data We Collect</h2>
+    <p>We store only what is necessary to deliver the app's features.</p>
 
-  <!-- 3 -->
-  <section id="s3">
-    <h2><span class="num">3</span> Data We Collect</h2>
-    <p>
-      StatusWatch for Jira collects only the minimum data necessary to provide its features.
-      The table below describes each category of personal data stored by the application.
-    </p>
-
-    <table class="data-table">
+    <table class="dt">
       <thead>
         <tr>
           <th>Data</th>
-          <th>Description</th>
           <th>Purpose</th>
-          <th>Stored?</th>
+          <th>Storage</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>Jira Account ID</strong></td>
-          <td>Unique identifier assigned by Atlassian to each Jira user</td>
           <td>Audit log authorship; access control allowlist</td>
-          <td>Yes — Forge KV Storage</td>
+          <td>Forge KV Storage</td>
         </tr>
         <tr>
           <td><strong>Display Name</strong></td>
-          <td>The name shown in Jira for each user</td>
           <td>Human-readable audit log entries</td>
-          <td>Yes — Forge KV Storage</td>
+          <td>Forge KV Storage</td>
         </tr>
         <tr>
           <td><strong>Jira Group ID</strong></td>
-          <td>Identifier of a Jira user group</td>
           <td>Group-based access control</td>
-          <td>Yes — Forge KV Storage</td>
+          <td>Forge KV Storage</td>
         </tr>
         <tr>
           <td><strong>Avatar URL</strong></td>
-          <td>Profile picture URL from Atlassian</td>
-          <td>Displayed in the admin UI during user search</td>
-          <td>No — fetched at request time only, never persisted</td>
+          <td>Shown during admin user search</td>
+          <td>Not stored — fetched on demand only</td>
         </tr>
         <tr>
           <td><strong>Statuspage API Key</strong></td>
-          <td>API credential for private Statuspage instances</td>
-          <td>Authenticating to private Statuspage pages</td>
-          <td>Yes — Forge Secret Storage (encrypted)</td>
+          <td>Authenticating to private Statuspage instances</td>
+          <td>Forge Secret Storage (encrypted)</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="highlight green">
-      <span class="icon">✅</span>
-      <span class="text">
-        We do <strong>not</strong> collect names, email addresses, IP addresses, device information,
-        usage analytics, or any data beyond what is listed above.
-        Incident data fetched from Statuspage is operational data — it contains no personal information.
-      </span>
+    <div class="callout green">
+      <span class="ic">✅</span>
+      <span>We do <strong>not</strong> collect email addresses, IP addresses, or usage analytics. Incident data fetched from Statuspage contains no personal information.</span>
     </div>
   </section>
 
-  <!-- 4 -->
+  <section id="s3">
+    <h2><span class="num">3</span> Legal Basis for Processing</h2>
+    <ul>
+      <li><strong>Legitimate interests</strong> — Audit log records serve the administrator's interest in tracking configuration changes.</li>
+      <li><strong>Contract performance</strong> — Account IDs in access settings are required to deliver the access control feature.</li>
+      <li><strong>Implicit consent</strong> — Administrators acknowledge data storage when adding users or groups to the access list.</li>
+    </ul>
+  </section>
+
   <section id="s4">
-    <h2><span class="num">4</span> Legal Basis for Processing</h2>
-    <p>We process personal data on the following legal bases under GDPR and applicable privacy law:</p>
+    <h2><span class="num">4</span> How We Use Your Data</h2>
     <ul>
-      <li>
-        <strong>Legitimate interests</strong> — Storing Account IDs and display names in the
-        audit log serves the legitimate interest of the Jira site administrator in maintaining
-        an auditable record of configuration changes.
-      </li>
-      <li>
-        <strong>Contract performance</strong> — Storing Account IDs in access settings is
-        necessary to deliver the access control feature that the Jira administrator has
-        configured as part of using the application.
-      </li>
-      <li>
-        <strong>Consent (implicit)</strong> — By adding a user or group to the access list,
-        the Jira administrator acknowledges that those identifiers will be stored.
-      </li>
+      <li><strong>Audit logging</strong> — Recording which administrator changed a connection, access setting, or banner, with their name and timestamp.</li>
+      <li><strong>Access control</strong> — Determining which Jira users or groups can view the StatusWatch status page.</li>
     </ul>
+    <p>We do not use personal data for advertising, profiling, or analytics.</p>
   </section>
 
-  <!-- 5 -->
   <section id="s5">
-    <h2><span class="num">5</span> How We Use Your Data</h2>
-    <p>Personal data is used solely for the following purposes:</p>
-    <ul>
-      <li>
-        <strong>Audit logging</strong> — Recording which Jira administrator added or removed
-        a Statuspage connection, changed access settings, or triggered a banner, with their
-        name and timestamp.
-      </li>
-      <li>
-        <strong>Access control</strong> — Determining which Jira users or groups are permitted
-        to view the StatusWatch status page within Jira.
-      </li>
-    </ul>
-    <p>
-      We do not use personal data for advertising, profiling, analytics, or any purpose
-      beyond the functionality described above.
-    </p>
-  </section>
+    <h2><span class="num">5</span> Data Storage &amp; Security</h2>
+    <p>All data is stored in <strong>Atlassian Forge KV Storage</strong> and <strong>Forge Secret Storage</strong> — Atlassian-managed services within the Atlassian Cloud.</p>
 
-  <!-- 6 -->
-  <section id="s6">
-    <h2><span class="num">6</span> Data Storage &amp; Security</h2>
-    <p>
-      All data stored by StatusWatch for Jira resides exclusively in
-      <strong>Atlassian Forge KV Storage</strong> and <strong>Forge Secret Storage</strong>.
-      These are Atlassian-managed infrastructure services hosted within the Atlassian Cloud.
-    </p>
-
-    <div class="highlight info">
-      <span class="icon">🔒</span>
-      <span class="text">
-        <strong>No personal data leaves the Atlassian platform.</strong>
-        We do not operate our own databases, servers, or cloud storage. Data does not pass
-        through any third-party infrastructure owned or operated by us.
-      </span>
+    <div class="callout blue">
+      <span class="ic">🔒</span>
+      <span><strong>No personal data leaves the Atlassian platform.</strong> We do not operate our own databases or cloud storage.</span>
     </div>
 
-    <p>Security measures in place:</p>
     <ul>
-      <li>API keys are stored in Forge Secret Storage, which encrypts secrets at rest</li>
-      <li>All resolver functions validate the calling user's Jira permissions before processing requests</li>
-      <li>External fetch URLs are explicitly allowlisted in the application manifest — the app cannot communicate with any unlisted domain</li>
-      <li>Webhook signatures are verified using HMAC-SHA256 before processing incoming payloads</li>
+      <li>API keys are encrypted at rest via Forge Secret Storage</li>
+      <li>All resolver functions verify the caller's Jira permissions before processing</li>
+      <li>External domains are explicitly allowlisted in the app manifest</li>
+      <li>Incoming webhooks are verified with HMAC-SHA256 signature checking</li>
     </ul>
   </section>
 
-  <!-- 7 -->
-  <section id="s7">
-    <h2><span class="num">7</span> Data Retention</h2>
-    <table class="data-table">
+  <section id="s6">
+    <h2><span class="num">6</span> Data Retention</h2>
+    <table class="dt">
       <thead>
         <tr>
           <th>Data</th>
-          <th>Retention Period</th>
-          <th>Deletion Method</th>
+          <th>Retention</th>
+          <th>Deletion</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>Audit Log</strong> (Account ID + Display Name)</td>
-          <td>Rolling window — oldest entries removed automatically when the 500-entry limit is reached</td>
-          <td>Automatic; no manual action required</td>
+          <td><strong>Audit Log</strong></td>
+          <td>Rolling — oldest entries removed automatically at 500-entry limit</td>
+          <td>Automatic</td>
         </tr>
         <tr>
-          <td><strong>Access Settings</strong> (Account ID, Group ID)</td>
-          <td>Until explicitly removed by a Jira site administrator</td>
-          <td>Admin removes the user or group from the access list in the app settings</td>
+          <td><strong>Access Settings</strong></td>
+          <td>Until removed by a site administrator</td>
+          <td>Manual, via app settings</td>
         </tr>
         <tr>
           <td><strong>Statuspage API Key</strong></td>
-          <td>Until the connection is deleted by an administrator</td>
-          <td>Admin removes the connection in the app settings</td>
+          <td>Until the connection is deleted</td>
+          <td>Manual, via app settings</td>
         </tr>
         <tr>
           <td><strong>Incident Cache</strong></td>
-          <td>90 days for resolved incidents; active incidents cleared on resolution</td>
+          <td>90 days for resolved incidents</td>
           <td>Automatic</td>
         </tr>
       </tbody>
     </table>
-    <p>
-      When the application is uninstalled from a Jira site, all data stored in Forge KV Storage
-      associated with that installation is deleted in accordance with Atlassian's Forge data
-      lifecycle policies.
-    </p>
+    <p>Uninstalling the app removes all associated data from Forge Storage per Atlassian's data lifecycle policy.</p>
   </section>
 
-  <!-- 8 -->
+  <section id="s7">
+    <h2><span class="num">7</span> Third-Party Services</h2>
+    <p>
+      The app fetches incident data from <strong>Statuspage.io</strong> (operated by Atlassian).
+      This is read-only and involves no personal data — only the configured page domain is transmitted.
+    </p>
+    <p>No personal data is shared with any advertising network, analytics platform, or third party.</p>
+  </section>
+
   <section id="s8">
-    <h2><span class="num">8</span> Third-Party Services</h2>
-    <p>
-      StatusWatch for Jira communicates with <strong>Statuspage.io</strong> (operated by Atlassian)
-      to fetch incident data for the services you configure. This communication is read-only
-      and involves no personal data — only the domain or page identifier of the Statuspage
-      instance is transmitted.
-    </p>
-    <p>
-      The application does not integrate with any advertising networks, analytics platforms,
-      or data brokers. No personal data is shared with any third party.
-    </p>
-
-    <div class="highlight info">
-      <span class="icon">ℹ️</span>
-      <span class="text">
-        All external domains the app is permitted to contact are declared in the application's
-        <code>manifest.yml</code> file and reviewed by Atlassian as part of the app listing process.
-      </span>
-    </div>
-  </section>
-
-  <!-- 9 -->
-  <section id="s9">
-    <h2><span class="num">9</span> Your Rights</h2>
-    <p>
-      Depending on your jurisdiction, you may have the following rights regarding your personal data:
-    </p>
+    <h2><span class="num">8</span> Your Rights</h2>
+    <p>Under GDPR and applicable law, you may request:</p>
     <ul>
-      <li><strong>Right of access</strong> — Request a copy of the personal data we hold about you</li>
-      <li><strong>Right to rectification</strong> — Request correction of inaccurate data</li>
-      <li><strong>Right to erasure</strong> — Request deletion of your personal data</li>
-      <li><strong>Right to restriction</strong> — Request that we limit processing of your data</li>
-      <li><strong>Right to object</strong> — Object to processing based on legitimate interests</li>
-      <li><strong>Right to portability</strong> — Request your data in a machine-readable format</li>
+      <li><strong>Access</strong> — a copy of your personal data</li>
+      <li><strong>Rectification</strong> — correction of inaccurate data</li>
+      <li><strong>Erasure</strong> — deletion of your personal data</li>
+      <li><strong>Restriction or objection</strong> — limiting how your data is processed</li>
+      <li><strong>Portability</strong> — your data in a machine-readable format</li>
     </ul>
     <p>
-      To exercise any of these rights, contact us at <strong>muratseven50@gmail.com</strong>.
-      Most data (audit log entries and access settings) can also be managed directly by the
-      Jira site administrator through the application's admin panel.
-    </p>
-    <p>
-      EU residents may also lodge a complaint with their local supervisory authority.
+      Contact us at <a href="mailto:muratseven50@gmail.com">muratseven50@gmail.com</a> to exercise these rights.
+      Audit log entries and access settings can also be managed directly by the Jira site administrator via the app.
+      EU residents may lodge a complaint with their local supervisory authority.
     </p>
   </section>
 
-  <!-- 10 -->
+  <section id="s9">
+    <h2><span class="num">9</span> Changes to This Policy</h2>
+    <p>
+      We may update this policy periodically. The effective date at the top reflects any changes.
+      Continued use of StatusWatch for Jira after updates constitutes acceptance of the revised policy.
+    </p>
+  </section>
+
   <section id="s10">
-    <h2><span class="num">10</span> Children's Privacy</h2>
-    <p>
-      StatusWatch for Jira is a business tool intended for use by organisations and their
-      employees. It is not directed at children under the age of 16. We do not knowingly
-      collect personal data from children.
-    </p>
-  </section>
-
-  <!-- 11 -->
-  <section id="s11">
-    <h2><span class="num">11</span> Changes to This Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. When we do, we will update the
-      effective date at the top of this page. For significant changes, we will notify users
-      through the Atlassian Marketplace listing page or via the app's admin interface.
-    </p>
-    <p>
-      Continued use of StatusWatch for Jira after changes are published constitutes
-      acceptance of the updated policy.
-    </p>
-  </section>
-
-  <!-- 12 -->
-  <section id="s12">
-    <h2><span class="num">12</span> Contact Us</h2>
-    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+    <h2><span class="num">10</span> Contact Us</h2>
     <ul>
       <li><strong>Company:</strong> Seven</li>
-      <li><strong>Email:</strong> muratseven50@gmail.com</li>
-      <li><strong>Website:</strong> <a href="https://seven-tech.atlassian.net/servicedesk" target="_blank" rel="noopener">seven-tech.atlassian.net/servicedesk</a></li>
+      <li><strong>Email:</strong> <a href="mailto:muratseven50@gmail.com">muratseven50@gmail.com</a></li>
+      <li><strong>Support:</strong> <a href="https://seven-tech.atlassian.net/servicedesk" target="_blank" rel="noopener">seven-tech.atlassian.net/servicedesk</a></li>
     </ul>
-    <p>We aim to respond to all privacy-related inquiries within <strong>30 days</strong>.</p>
+    <p style="margin-top:12px;">We aim to respond to all inquiries within <strong>30 days</strong>.</p>
   </section>
 
-</div><!-- /page-wrap -->
+</div>
 
 <footer>
-  <p>
-    &copy; <span id="yr"></span> Seven · StatusWatch for Jira ·
-    <a href="#s1">Privacy Policy</a>
-  </p>
-  <p style="margin-top:6px;">
-    Built on <a href="https://developer.atlassian.com/platform/forge/" target="_blank" rel="noopener">Atlassian Forge</a>
-    &nbsp;·&nbsp;
-    <a href="https://marketplace.atlassian.com" target="_blank" rel="noopener">Atlassian Marketplace</a>
-  </p>
+  <p>&copy; <span id="yr"></span> Seven &nbsp;·&nbsp; StatusWatch for Jira &nbsp;·&nbsp; <a href="https://marketplace.atlassian.com" target="_blank" rel="noopener">Atlassian Marketplace</a></p>
 </footer>
 
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
